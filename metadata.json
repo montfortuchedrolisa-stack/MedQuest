@@ -1,0 +1,5 @@
+{
+  "name": "MedQuest",
+  "description": "A high-fidelity question generator for medical students, featuring psychometrically sound vignettes and detailed explanations.",
+  "requestFramePermissions": []
+}

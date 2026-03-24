@@ -1,0 +1,23 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile and trial information",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Firebase Auth UID" },
+        "username": { "type": "string", "description": "User chosen username" },
+        "email": { "type": "string", "description": "User email" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Account creation timestamp" },
+        "trialStartDate": { "type": "string", "format": "date-time", "description": "Start date of the 3-day trial" }
+      },
+      "required": ["uid", "username", "email", "createdAt", "trialStartDate"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile documents"
+    }
+  }
+}

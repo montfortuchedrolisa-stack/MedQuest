@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Libre Baskerville", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-medical-navy: #0F172A;
+  --color-medical-teal: #0D9488;
+  --color-medical-paper: #F8FAFC;
+  --color-medical-ink: #1E293B;
+}
+
+@layer base {
+  body {
+    @apply antialiased bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100;
+  }
+}
+
+@layer utilities {
+  .paper-texture {
+    background-color: var(--color-medical-paper);
+    background-image: radial-gradient(#e2e8f0 0.5px, transparent 0.5px);
+    background-size: 12px 12px;
+  }
+
+  @variant dark {
+    .paper-texture {
+      background-color: var(--color-medical-navy);
+      background-image: radial-gradient(#1e293b 0.5px, transparent 0.5px);
+    }
+  }
+}
